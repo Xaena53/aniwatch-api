@@ -53,7 +53,7 @@ app.onError((err, c) => {
     res.message = err.message;
   }
 
-    return c.json(res, res.status);
+    return c.json(res, res.status as any);
 });
 
 // NOTE: this env is "required" for vercel deployments
